@@ -1,0 +1,21 @@
+.padre{
+    font-size: 23px;
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    padding: 0.5%;
+}
+
+a{
+    transition: 0.7s;
+
+}
+
+a:hover{
+    transition: 0.7s;
+   font-size: 25px;
+}
+
+nav{
+    border-radius: 20px;
+}
