@@ -20,12 +20,6 @@ const Barra = () => {
         </li>
         <li class="nav-item  dropdown ">
           <a class="nav-link  dropdown -toggle" href="#" role="button" data-bs-toggle=" dropdown" aria-expanded="false">
-            Más contenido
-          </a>
-          
-        </li>
-        <li class="nav-item  dropdown ">
-          <a class="nav-link  dropdown -toggle" href="#" role="button" data-bs-toggle=" dropdown" aria-expanded="false">
             Nuevos Titulos
           </a>
           
@@ -42,7 +36,6 @@ const Barra = () => {
     </div>
   </div>
 </nav>
-
 </div>
   )
 }

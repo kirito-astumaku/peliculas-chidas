@@ -1,0 +1,36 @@
+
+
+
+.padre1{
+   position: absolute; 
+    left: 8%;
+    top: 15%;
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  height: 100%;
+  padding: 3%; 
+  gap:20px;
+
+}
+
+.imagenes{
+    border-radius: 20px;
+    padding: 1%;
+    width: 250px;
+}
+
+ .padre2{
+    
+    border: 5px rgb(11, 113, 30) solid;
+    width: 20%;
+    text-align: center;
+    padding: 1%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.34);
+    cursor: pointer;
+}
+
+h1{
+    font-size: 20px;
+} 
