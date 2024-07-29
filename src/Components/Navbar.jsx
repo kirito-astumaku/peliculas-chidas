@@ -1,8 +1,48 @@
+
 import React from 'react'
 import './style.css';
 import { Outlet } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const Barra = () => {
+  const API = "https://api.themoviedb.org/3"
+  const API_key = '7784654e88b1ef3568884755de9355cb'
+  const IMAGES_padt = 'https://image.tmdb.org/t/p/original'
+  const URL_img = 'https://image.tmdb.org/t/p/original'
+
+  const [moveis, setmoveis] = useState([])
+  const[searchkey, setseacrhKey] = useState("")
+  const [trailer, settrailer] = useState('null')
+  const [movie, setmovie] = useState({ title:"loading movies"})
+  const [playing, setplaying] = useState(false)
+
+  const feachmovis = async (searchkey) => {
+    const type = searchkey ? "search" : "discover";
+    try {
+      const { data: { results } } = await axios.get(`${API}/${type}/movie`, {
+        params: {
+          api_key: API_key,
+          query: searchkey, 
+        },
+      });
+      setmoveis(results);
+     setmovie(results)  ; 
+    } catch (error) {
+      console.error("Error al obtener las películas:", error);
+    }
+  };
+
+
+  const seachmovises = (e) =>{
+     e.preventDefault(),
+     feachmovis(searchkey)
+  }
+
+
+  useEffect (() =>{
+    feachmovis();
+  },[])
+
   return (
     <div className="padre">
 <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -30,10 +70,6 @@ const Barra = () => {
           <a className="nav-link" href="#">Clasicos</a>
         </li>
         </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Bucar</button>
-      </form>
     </div>
   </div>
 </nav>
