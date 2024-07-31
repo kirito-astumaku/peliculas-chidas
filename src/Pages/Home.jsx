@@ -71,6 +71,7 @@ const Casa = () => {
           <h4 style={{ color: 'white' }}>{movie.title}</h4>
           <h3 style={{ color: 'white' }}>⭐Rating: {movie.vote_average}</h3>
           <h3 style={{ color: 'white' }}>🎍Año: {movie.release_date}</h3>
+          <h3 style={{ color: 'white' }}>{movie.id}</h3>
         </div>
       ))
     )}

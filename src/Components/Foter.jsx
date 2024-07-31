@@ -1,10 +1,13 @@
 import React from 'react'
+import './style.css';
+import { Outlet } from 'react-router-dom';
 
 const Foters = () => {
   return (
     <div>
-      <h1 style={{color:"white"}}>hola</h1>
+        
     </div>
+   
   )
 }
 

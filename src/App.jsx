@@ -14,6 +14,8 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Barra/>,
+    /* path: "/",
+    element: <Foters/> */ 
     children: [
       {
         path: "/",
@@ -44,7 +46,7 @@ function App() {
        <RouterProvider router={router}>
        
        </RouterProvider>
-       <Foters/> 
+      
        
     </>  
   )

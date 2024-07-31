@@ -27,3 +27,11 @@ img{
     
 }
 
+@media screen and (max-width: 600px) 
+{
+    #padre1{
+        flex-direction: column;
+        width:300%;
+       }
+}
+
