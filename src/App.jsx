@@ -8,26 +8,24 @@ import {
   RouterProvider,
 
 } from "react-router-dom" ;
-import Foters from './Components/Foter';
+import Apps from './Pages/FIlterMas'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Barra/>,
-    /* path: "/",
-    element: <Foters/> */ 
     children: [
       {
         path: "/",
         element: <Casa/>,
       },
       {
-        path: "/",
-        element: <Foters/>,
+        path:"/movie/:id",
+        element: <IFpalis/>,
       },
       {
-        path:"/Iformación/:id",
-        element: <IFpalis/>,
+        path:"/movie/FIlterMas",
+        element: <Apps/>,
       }
     ],
   },
@@ -46,8 +44,6 @@ function App() {
        <RouterProvider router={router}>
        
        </RouterProvider>
-      
-       
     </>  
   )
 }
